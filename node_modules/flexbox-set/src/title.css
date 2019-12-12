@@ -1,0 +1,54 @@
+.xxx {
+  overflow: overflow-y;
+}
+.title,
+.subtitle {
+  word-break: break-word;
+}
+.title em,
+.title span,
+.subtitle em,
+.subtitle span {
+  font-weight: 300;
+}
+.title strong,
+.subtitle strong {
+  font-weight: 500;
+}
+.title .tag,
+.subtitle .tag {
+  vertical-align: middle;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.125;
+}
+.title strong {
+  color: inherit;
+}
+.title + .highlight {
+  margin-top: -0.75rem;
+}
+.title + .subtitle {
+  margin-top: -1.25rem;
+}
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.subtitle + .title {
+  margin-top: -1.5rem;
+}
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.title-$padSteps {
+  color: $titleTextColor;
+  font-size: $padSteps rem;
+}
+.subtitle-$padSteps {
+  color: $secondaryTextColor;
+  font-size: 0.75em;
+}

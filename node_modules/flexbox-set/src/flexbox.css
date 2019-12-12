@@ -1,0 +1,126 @@
+/* default */
+.flex-columns,
+.flex {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.flex-columns .flex-break,
+.flex .flex-break {
+  width: 100%;
+}
+.flex-rows {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.flex-rows .flex-break {
+  height: 100%;
+}
+.flex-wrap,
+.flex-multi {
+  flex-wrap: wrap;
+}
+.flex-wrap--reverse,
+.flex-multi--reverse {
+  flex-wrap: wrap-reverse;
+}
+.flex-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.flex-cell--static,
+.flex-cell--pull-left,
+.flex-cell--pull-right,
+.flex-cell--pull-top,
+.flex-cell--pull-bottom,
+.flex-cell--full,
+.flex-cell--1-2,
+.flex-cell--2-3,
+.flex-cell--1-3,
+.flex-cell--1-4,
+.flex-cell--1-5 {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.flex-cell--pull-left {
+  margin-right: auto;
+}
+.flex-cell--pull-right {
+  margin-left: auto;
+}
+.flex-cell--pull-top {
+  margin-bottom: auto;
+}
+.flex-cell--pull-bottom {
+  margin-top: auto;
+}
+.flex-cell--full {
+  flex-basis: 100%;
+}
+.flex-cell--1-2 {
+  flex-basis: 50%;
+}
+.flex-cell--2-3 {
+  flex-basis: 66.66%;
+}
+.flex-cell--1-3 {
+  flex-basis: 33.33%;
+}
+.flex-cell--1-4 {
+  flex-basis: 25%;
+}
+.flex-cell--1-5 {
+  flex-basis: 20%;
+}
+.flex--main-center {
+  justify-content: center;
+}
+.flex--main-end {
+  justify-content: flex-end;
+}
+.flex--main-around {
+  justify-content: space-around;
+}
+.flex--main-evenly {
+  justify-content: space-evenly;
+}
+.flex--main-between {
+  justify-content: space-between;
+}
+.flex--cross-start {
+  align-items: flex-start;
+}
+.flex--cross-center {
+  align-items: center;
+}
+.flex--cross-end {
+  align-items: flex-end;
+}
+/* default */
+.flex--cross-fill,
+.flex--cross-stretch {
+  align-items: stretch;
+}
+.flex-multi--cross-start {
+  align-content: flex-start;
+}
+.flex-multi--cross-center {
+  align-content: center;
+}
+.flex-multi--cross-end {
+  align-content: flex-end;
+}
+.flex-multi--cross-around {
+  align-content: space-around;
+}
+.flex-multi--cross-between {
+  align-content: space-between;
+}
+/* default */
+.flex-multi--cross-fill,
+.flex-multi--cross-stretch {
+  align-content: stretch;
+}

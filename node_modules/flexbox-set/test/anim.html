@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anim</title>
+
+    <script src="https://cdn.jsdelivr.net/vue/2.3.2/vue.min.js"></script>
+    <script src="http://animejs.com/anime.min.js"></script>
+</head>
+<body>
+
+<div id="app" style="display: none;">
+    <h1 :ref="'item' + i" v-for="i in 10">One two three {{ i }}</h1>
+
+</div>
+
+<script>
+
+  var app = new Vue({
+    el: '#app',
+    mounted: function () {
+      console.log(this.$refs)
+      var absoluteOffset = anime.timeline()
+
+      absoluteOffset
+          .add({
+            targets: this.$refs.item1,
+            translateX: [250,0],
+            easing: 'easeOutExpo',
+            offset: 0 // Starts at 1000ms of the timeline
+          })
+          .add({
+            targets: this.$refs.item2,
+            translateX: [250,0],
+            opacity: [0,1],
+            easing: 'easeOutExpo',
+            offset: 500 // Starts at 500ms of the timeline
+          })
+          .add({
+            targets: this.$refs.item3,
+            translateX: [250,0],
+            opacity: [0,1],
+            easing: 'easeOutExpo',
+            duration: 100,
+            offset: 1500 // Starts at 0ms of the timeline
+          });
+
+      absoluteOffset.update = function(anim) {
+        console.log(anim)
+        // console.log(anim.currentTime + 'ms'); // Get current animation time with `myAnimation.currentTime`, return value in ms.
+        // console.log(anim.progress + '%'); // Get current animation progress with `myAnimation.progress`, return value in %
+      }
+
+      absoluteOffset.complete = function () {
+        console.log('complete')
+        absoluteOffset.reverse()
+        absoluteOffset.play()
+
+        absoluteOffset.complete = function () {
+          console.log('complete2')
+        }
+      }
+
+      this.$el.style.display = 'block'
+      console.log('Timeline is ', absoluteOffset)
+
+
+    },
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+
+</script>
+
+
+</body>
+</html>
